@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #D4AF37;
+    --color-navy-dark: #0A0E1A;
+    --color-navy-card: #151B2B;
+    --color-accent-gold: #FFD700;
+    --color-soft-gold: #C3A158;
+
+    --font-display: Epilogue, sans-serif;
+    --font-fancy: "Playfair Display", serif;
+}
+
+@utility glass-effect {
+    backdrop-filter: blur(2px);
+    background: rgba(10, 14, 26, 0.85);
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
