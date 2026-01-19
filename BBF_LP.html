@@ -4,8 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"
+        content="Bharat Bonus Fest - Earn extra cash bonuses on every level of Credit Cards and Loans. Join BankSathi's premier financial festival 2026." />
     <title>Bharat Bonus Fest Landing Page</title>
     <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,600;1,600&amp;family=Noto+Sans:wght@400;700&amp;display=swap"
         rel="stylesheet" />
@@ -24,16 +28,12 @@
         .fill-icon {
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-    </style>
-    <style>
-        body {
-            min-height: max(884px, 100dvh);
-        }
 
         .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease-out;
+            will-change: transform, opacity;
         }
 
         .reveal.active {
@@ -301,6 +301,19 @@
             border-color: #22c55e;
             box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
         }
+
+        .timeline-line {
+            position: absolute;
+            left: 5.4rem;
+            top: 2.2rem;
+            /* equivalent to top-6 */
+            bottom: 2.25rem;
+            /* equivalent to bottom-9 */
+            width: 2px;
+            background-color: #D4AF37;
+            /* accent-gold */
+            z-index: 0;
+        }
     </style>
 </head>
 
@@ -308,16 +321,16 @@
     <nav class="sticky top-0 z-50 glass-effect border-b border-white/10">
         <div class="flex items-center p-4 justify-between max-w-md mx-auto">
             <div class="flex items-center gap-2">
-                <div class="bg-accent-gold p-1.5 rounded-lg flex items-center justify-center">
-                    <span class="material-symbols-outlined text-navy-dark text-[24px] fill-icon">account_balance</span>
+                <div class="bg-white p-1 rounded-lg flex items-center justify-center">
+                    <img src="./banksathi_logo.png" alt="Banksathi Logo" class="size-6 object-contain" />
                 </div>
-                <h2 class="text-white text-lg font-extrabold tracking-tight uppercase">Bharat Bonus Fest</h2>
+                <h1 class="text-white text-lg font-extrabold tracking-tight uppercase">Bharat Bonus Fest</h1>
             </div>
             <div class="flex items-center">
                 <div onclick="openProgressSheet()"
                     class="flex items-center justify-center bg-[#1a1f2e] p-1 rounded-full border border-white/10 shadow-sm cursor-pointer hover:bg-white/5 transition-colors">
                     <div class="flex items-center justify-center size-8 bg-accent-gold rounded-full">
-                        <span
+                        <span aria-hidden="true"
                             class="material-symbols-outlined text-navy-dark text-[20px] font-bold">currency_rupee</span>
                     </div>
                 </div>
@@ -328,7 +341,8 @@
         <section class="p-4">
             <div
                 class="relative overflow-hidden rounded-2xl bg-slate-900 aspect-[3/2] shadow-xl group border border-accent-gold/20">
-                <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("./banner_new.jpg");'>
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style='background-image: url("./BBF_2026_banner_LP.jpg");'>
                 </div>
             </div>
         </section>
@@ -610,7 +624,7 @@
                                 <span class="material-symbols-outlined text-accent-gold text-[28px]">share</span>
                             </div>
                             <span
-                                class="text-[10px] font-black uppercase text-center text-white leading-tight tracking-wider">Share<br>Leads</span>
+                                class="text-[10px] font-black uppercase text-center text-white leading-tight tracking-wider">Add<br>Leads</span>
                         </div>
                         <div class="relative z-10 flex flex-col items-center gap-4 w-1/3 step-highlight"
                             style="animation-delay: 2s;">
@@ -675,9 +689,8 @@
 
                 <div class="relative pl-0">
                     <!-- Vertical Line -->
-                    <div class="absolute left-[5.4rem] top-8 bottom-9 w-[2px] bg-accent-gold/30"></div>
-                    <div class="absolute left-[5.4rem] top-8 bottom-9 w-[2px] bg-accent-gold blur-[0.5px] opacity-40">
-                    </div>
+                    <div class="timeline-line opacity-30"></div>
+                    <div class="timeline-line blur-[0.5px] opacity-40"></div>
 
                     <!-- Item 1: 19 Jan 2026 -->
                     <div class="flex gap-4 items-center mb-6 relative z-10" data-milestone-date="2026-01-19">
@@ -764,7 +777,7 @@
                 </div>
             </section>
 
-            <section class="mt-8 px-4 pb-12">
+            <section id="faq-section" class="mt-8 px-4 pb-12">
                 <h3 class="text-white text-xl font-black mb-4">FAQs</h3>
                 <div class="space-y-3">
                     <!-- FAQ 1 -->
@@ -886,7 +899,7 @@
                 { name: 'SBI Bank', src: 'BBF_bank_logos/supported_cc_bank_logo/SBI Bank.svg' },
                 { name: 'HDFC Bank', src: 'BBF_bank_logos/supported_cc_bank_logo/HDFC Bank.png' },
                 { name: 'Axis Bank', src: 'BBF_bank_logos/supported_cc_bank_logo/AXIS BANK.png' },
-                { name: 'IDFC Bank', src: 'BBF_bank_logos/supported_cc_bank_logo/IDFC Bank' }, // No extension check
+                { name: 'IDFC Bank', src: 'BBF_bank_logos/supported_cc_bank_logo/IDFC Bank.png' },
                 { name: 'AU Bank', src: 'BBF_bank_logos/supported_cc_bank_logo/AU BANK.png' },
                 { name: 'Bobcard', src: 'BBF_bank_logos/supported_cc_bank_logo/BOBCARD.png' },
                 { name: 'Equitas', src: 'BBF_bank_logos/supported_cc_bank_logo/Equitas SF bank .jpg' },
@@ -919,6 +932,7 @@
                          <div class="size-full rounded-full bg-navy-card flex items-center justify-center overflow-hidden">
                             <img alt="${brand.name}" 
                                  class="size-full object-contain"
+                                 loading="lazy"
                                  src="${brand.src}" />
                          </div>
                     </div>
@@ -1002,6 +1016,30 @@
 
             // Initialize timeline milestones
             updateTimelineMilestones();
+
+            // Back to Top Visibility (Intersection Observer)
+            const bttButton = document.getElementById('back-to-top');
+            const faqSection = document.getElementById('faq-section');
+
+            if (bttButton && faqSection) {
+                const bttObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+                            // Show if intersecting OR if we have passed it (scrolled below it)
+                            bttButton.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                            bttButton.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                        } else {
+                            // Hide if we are above it
+                            bttButton.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                            bttButton.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                        }
+                    });
+                }, {
+                    threshold: 0 // Trigger as soon as target enters/leaves even slightly
+                });
+
+                bttObserver.observe(faqSection);
+            }
         });
 
         // Timeline Milestone Status Update
@@ -1049,11 +1087,28 @@
             const bgElement = triggerContainer ? triggerContainer.querySelector('.absolute.inset-0.bg-gradient-to-br') : null;
 
             // Set canvas size
+            // Smart resize logic to prevent canvas clearing on mobile scroll (URL bar resize)
+            let lastWidth = window.innerWidth;
+            let lastHeight = window.innerHeight;
+
             function resizeCanvas() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+                const newWidth = window.innerWidth;
+                const newHeight = window.innerHeight;
+
+                // Only resize if width changes (orientation/desktop) 
+                // OR if height changes significantly (keyboard/layout change), ignoring small URL bar changes
+                if (newWidth !== lastWidth || Math.abs(newHeight - lastHeight) > 150) {
+                    canvas.width = newWidth;
+                    canvas.height = newHeight;
+                    lastWidth = newWidth;
+                    lastHeight = newHeight;
+                }
             }
-            resizeCanvas();
+
+            // Initial set
+            canvas.width = lastWidth;
+            canvas.height = lastHeight;
+
             window.addEventListener('resize', resizeCanvas);
 
             const confettiColors = ['#ffffff', '#3b82f6', '#22c55e', '#f97316']; // White, Blue, Green, Orange
@@ -1557,6 +1612,18 @@
             updateProgressDisplay(tab);
         }
     </script>
+
+    <!-- Back to Top Button -->
+    <!--div id="back-to-top"
+        class="fixed bottom-32 right-6 z-[80] flex flex-col items-center gap-2 opacity-0 pointer-events-none translate-y-4 transition-all duration-500 cursor-pointer"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div
+            class="size-12 rounded-full bg-[#0096FF] flex items-center justify-center shadow-[0_0_20px_rgba(0,150,255,0.3)] hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-white text-[32px] font-black"
+                aria-hidden="true">expand_less</span>
+        </div>
+        <span class="text-[#0096FF] text-[10px] font-black uppercase tracking-widest leading-none">Back To Top</span>
+    </div>
 
 </body>
 
